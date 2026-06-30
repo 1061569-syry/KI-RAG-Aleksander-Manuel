@@ -1,0 +1,35 @@
+# ============================================================
+# ALTERNATIVE: Ollama UND Open WebUI im Container
+# Einfacher, aber Ollama im Container ist etwas langsamer.
+# ============================================================
+# Nach dem Start Modell laden:
+#   docker exec -it ki-ollama ollama pull gemma3:1b
+# ============================================================
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ki-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: ki-webui
+    ports:
+      - "3000:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - WEBUI_SECRET_KEY=ki-projekt-2025
+    volumes:
+      - webui-data:/app/backend/data
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama-data:
+  webui-data:
