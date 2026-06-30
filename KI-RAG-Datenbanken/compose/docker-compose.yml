@@ -1,0 +1,32 @@
+# ============================================================
+# KI-Projekt – Open WebUI im Container, Ollama lokal auf dem PC
+# HAUPTVARIANTE für dieses Projekt
+# ============================================================
+# Voraussetzung: Ollama läuft auf dem PC mit OLLAMA_HOST=0.0.0.0
+#   ollama pull gemma3:1b
+#
+# Start:  docker compose up -d
+# Stop:   docker compose down
+# WebUI:  http://localhost:3000
+# ============================================================
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: ki-webui
+    ports:
+      - "3000:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"   # wichtig (v.a. Linux)
+    environment:
+      # Windows/Mac: host.docker.internal zeigt auf den PC
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      # Linux-Alternative:
+      # - OLLAMA_BASE_URL=http://172.17.0.1:11434
+      - WEBUI_SECRET_KEY=ki-projekt-2025
+    volumes:
+      - webui-data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  webui-data:

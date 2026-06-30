@@ -1,7 +1,7 @@
 # Arbeitsblatt 1 – KI-Grundlagen & erster Kontakt
 
-**Gruppe:** ____________________  **Domäne:** ____________________
-**Datum:** ____________
+**Gruppe:** Gruppe 13 **Domäne:** Datenbanken
+**Datum:** 30.06.2026
 
 > **Ziel:** Du verstehst, wie ein Sprachmodell grundsätzlich funktioniert, und
 > hast die lokale KI zum ersten Mal selbst ausprobiert.
