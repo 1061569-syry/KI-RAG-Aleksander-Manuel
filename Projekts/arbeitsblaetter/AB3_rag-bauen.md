@@ -1,6 +1,6 @@
 # Arbeitsblatt 3 – Mini-RAG bauen
 
-**Gruppe:** ____________________  **Domäne:** ____________________
+**Gruppe:** Grupp 13  **Domäne:** Datenbanken
 
 > **Ziel:** Ihr baut für eure Domäne eine eigene Wissensbasis und seht im
 > direkten Vorher/Nachher-Vergleich, was RAG bewirkt.
@@ -12,16 +12,16 @@
 
 **A.1** Wofür steht die Abkürzung RAG?
 
-R____________ A____________ G____________
+Retrieval Augmented Generation
 
 **A.2** Erkläre den Vergleich „Klassenarbeit ohne / mit Spickzettel" in eigenen
 Worten:
 
-_________________________________________________________________
+Klassenarbeit, ohne Spickzettel muss man alles auswendig können, was natürlich zu Fehlern kommen kann, aber mit Spickzettel, wenn es Lücken in Wissen gibt, dann kann man einen kleinen Blick auf das Spickzettel machen und dann wieder auf das richtige Weg gehen, KI in diesen Zusammenhang, muss normalerweise ohne Wissen Basis, selber deine Frage beantworten, was dazu führt, dass er Halluzinationen viel öfter kriegt, aber mit einer Wissen Basis, kann die KI hineingucken und viel weniger Fehler machen.
 
 **A.3** Nenne die zwei wichtigsten Faktoren für die Qualität eines RAG-Systems:
 
-1. _______________________________________________________________
+1. 
 2. _______________________________________________________________
 
 ---
@@ -35,11 +35,11 @@ ihr kennt. Tragt sie in die Tabelle ein und stellt sie dem Modell.
 
 | # | Frage | Antwort korrekt? (ja/teils/nein) | Was war falsch? |
 |---|-------|----------------------------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+| 1 | Was ist ORDER BY und wie nutzt man die? | JA | Nichts 
+| 2 | Wie erstellt man einen Primary Key? | JA | Nichts |
+| 3 | Was ist der Unterschied zwischen INNER JOIN und LEFT JOIN? | NEIN | Erfundene Begriffe: INNER SELECT? "Verzeit für Ergebnisse", "Link zur Linksseite" |
+| 4 | Was bewirkt die GROUP-BY Klausel und welche Bedingung nutzt man danach statt WHERE? | | |
+| 5 | Was ist der Unterschied zwischen den Datentypen CHAR und VARCHAR? | | |
 
 **B.2** Wie viele der 5 Antworten waren vollständig korrekt? ______ / 5
 

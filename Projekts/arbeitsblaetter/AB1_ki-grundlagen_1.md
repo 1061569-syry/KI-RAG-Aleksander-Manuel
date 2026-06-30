@@ -13,27 +13,27 @@
 
 **1.1** Erkläre in einem Satz, was ein LLM bei jeder Eingabe eigentlich tut.
 
-_________________________________________________________________
+Es ist ein Programm, das gelernt hat, Sprache fortzusetzen.
 
 **1.2** Was ist ein **Token**? Gib ein Beispiel.
 
-_________________________________________________________________
+Ein Token ist ein Wort oder Wortteil , mit der ein KI-Modell arbeitet 
+Beispiel: Das Wort „Datenbanken“ wird vom Modell nicht als Ganzes, sondern in Token wie „Daten“ und „banken“ zerlegt.
 
-**1.3** Das Modell „weiß" nichts, es rechnet mit ______________________.
+**1.3** Das Modell „weiß" nichts, es rechnet mit Wahrscheinlichkeiten.
 Deshalb kann es Antworten geben, die plausibel klingen, aber falsch sind.
-Dieses Phänomen heißt ______________________.
+Dieses Phänomen heißt Halluzination.
 
 **1.4** Was bedeutet **nicht-deterministisch**? Nenne den Unterschied zu einer
 C#-Methode, die ihr im Unterricht geschrieben habt.
 
-_________________________________________________________________
-
-_________________________________________________________________
+nicht-deterministisch heißt: Dieselbe Frage kann unterschiedliche Antworten liefern
+der Unterschied ist das C#-Methode liefert bei gleicher Eingabe immer dasselbe
 
 **1.5** Ordne zu, was die **Temperatur** bewirkt:
 
-- niedrige Temperatur (0–0.3): ___________________________________
-- hohe Temperatur (0.8–1.5): _____________________________________
+- niedrige Temperatur (0–0.3): Wählt immer die Wahrscheinlichsten wörter
+- hohe Temperatur (0.8–1.5): Wählt auch unwahrscheinliche Wörter
 
 ---
 
@@ -59,7 +59,7 @@ Was sagt das über das Verhalten des Modells aus? ________________
 _________________________________________________________________
 
 **2.3 Sprache testen.** Frage etwas auf Deutsch. Antwortet das Modell zuverlässig
-auf Deutsch?  ☐ ja ☐ nein – wechselt manchmal zu: __________________
+auf Deutsch?  ☐ ja X nein – wechselt manchmal zu: Englisch
 
 **2.4 Grenzen des kleinen Modells.** `gemma3:1b` ist klein und schnell, aber
 schwach. Notiere ein konkretes Beispiel, bei dem das Modell erkennbar an seine
@@ -74,9 +74,7 @@ _________________________________________________________________
 **3.1** Warum kann man sich auf die Antworten dieses Modells (ohne weitere
 Hilfsmittel) bei Fachfragen **nicht** verlassen?
 
-_________________________________________________________________
-
-_________________________________________________________________
+Das Modell wurde 
 
 **3.2** Formuliere eine Vermutung: Wie könnte man dem Modell beibringen, bei
 *deiner* Domäne korrektere Antworten zu geben? (Das ist das Thema von Tag 2.)
