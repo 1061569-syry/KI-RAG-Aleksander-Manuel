@@ -1,6 +1,6 @@
 # Arbeitsblatt 2 – Installation der lokalen KI-Umgebung
 
-**Gruppe:** ____________________  **Domäne:** ____________________
+**Gruppe:** Gruppe 13  **Domäne:** Datenbanken
 
 > **Ziel:** Ihr habt Docker, Ollama und Open WebUI eingerichtet und das Modell
 > `gemma3:1b` läuft.
@@ -14,9 +14,9 @@ Trage ein, wo welche Komponente läuft (im Container / direkt auf dem PC):
 
 | Komponente | läuft … | Port |
 |------------|---------|------|
-| Open WebUI | __________________ | ______ |
-| Ollama | __________________ | ______ |
-| gemma3:1b | (im Modell-Speicher von Ollama) | – |
+| Open WebUI | (im Container von Docker) | 3000 |
+| Ollama | (direkt auf PC)| 11434 |
+| gemma3:1b | (im Modell-Speicher von Ollama) | 8080 |
 
 ---
 
@@ -24,16 +24,16 @@ Trage ein, wo welche Komponente läuft (im Container / direkt auf dem PC):
 
 Hake ab, sobald ein Schritt erledigt und geprüft ist.
 
-- [ ] **Docker Desktop** läuft (`docker --version` zeigt eine Version)
-- [ ] **Ollama installiert** (`ollama --version`)
-- [ ] **Umgebungsvariable** `OLLAMA_HOST = 0.0.0.0` gesetzt
-- [ ] **Modell geladen** (`ollama pull gemma3:1b`)
-- [ ] **Compose-Datei** im Projektordner
-- [ ] **Container gestartet** (`docker compose up -d`)
-- [ ] **WebUI erreichbar** unter `http://localhost:3000`
-- [ ] **Account angelegt** (lokal)
-- [ ] **Modell `gemma3:1b`** in der Auswahl sichtbar
-- [ ] **Erste Antwort** erhalten
+- [X] **Docker Desktop** läuft (`docker --version` zeigt eine Version)
+- [X] **Ollama installiert** (`ollama --version`)
+- [X] **Umgebungsvariable** `OLLAMA_HOST = 0.0.0.0` gesetzt
+- [X] **Modell geladen** (`ollama pull gemma3:1b`)
+- [X] **Compose-Datei** im Projektordner
+- [X] **Container gestartet** (`docker compose up -d`)
+- [X] **WebUI erreichbar** unter `http://localhost:3000`
+- [X] **Account angelegt** (lokal)
+- [X] **Modell `gemma3:1b`** in der Auswahl sichtbar
+- [X] **Erste Antwort** erhalten
 
 ---
 
@@ -43,13 +43,13 @@ Hake ab, sobald ein Schritt erledigt und geprüft ist.
 ```bash
 curl http://localhost:11434
 ```
-Ausgabe: ____________________________________________
+Ausgabe: "Ollama is running"
 
 **Welche Modelle sind installiert?**
 ```bash
 curl http://localhost:11434/api/tags
 ```
-Gefundene Modelle: ___________________________________
+Gefundene Modelle: "{"models":[{"name":"gemma3:1b","model":"gemma3:1b","modified_at":"2026-06-23T10:00:15.7672409+02:00","size":815319791,"digest":"8648f39daa8fbf5b18c7b4e6a8fb4990c692751d49917417b8842ca5758e7ffc","details":{"parent_model":"","format":"gguf","family":"gemma3","families":["gemma3"],"parameter_size":"999.89M","quantization_level":"Q4_K_M"},"capabilities":["completion"]}]}"
 
 ---
 
@@ -60,9 +60,7 @@ Dokumentation und hilft anderen Gruppen!
 
 | Problem | Lösung | gelöst? |
 |---------|--------|---------|
-| | | ☐ |
-| | | ☐ |
-| | | ☐ |
+| Diese App kann auf dem PC nicht ausgeführt werden (Docker) | Falsche Docker Seite genutzt |[X]|
 
 > **Tipp:** Die drei häufigsten Fehler sind: (1) WebUI findet kein Modell →
 > `host.docker.internal` statt `localhost`; (2) `OLLAMA_HOST` nicht gesetzt;
