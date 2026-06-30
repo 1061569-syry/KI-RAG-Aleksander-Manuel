@@ -1,0 +1,5 @@
+*.env
+**/secrets*
+*api*key*
+webui-data/
+ollama-data/
